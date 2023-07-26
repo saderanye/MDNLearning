@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>Handling Text - Strings in Javascript</title>
+</head>
+
+<body>
+
+	<!--https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings -->
+
+	<button>Press me</button>
+
+
+
+
+	<script>
+
+		const button = document.querySelector("button");
+
+		function greet() {
+			const name = prompt("What is your name?");
+			alert(`Hello ${name}, nice to see you!`);
+
+		}
+
+		button.addEventListener("click", greet);
+
+
+		//Below practice with Console Log
+		const name = "Front ";
+		const number = 242;
+		console.log(`${name}${number}`);
+
+
+		const myString = "123";
+		const myNum = Number(myString);
+		console.log(typeof myNum);
+
+		const song = "Fight the Youth";
+		const score = 9;
+		const highestScore = 10;
+		const output = `I like the song ${song}. I gave it a score of ${(score / highestScore) * 100
+			}%.`;
+		console.log(output);
+
+		// Example of template literals respect the line breaks in the source code
+		const outputTwo = `I like the song.
+I gave it a score of 90%`;
+		console.log(outputTwo);
+
+		// Equivalent output using a normal string you'd have to include line break characters (\n) in the string
+		const outputThree = "I like the song.\nI gave it a score of 90%.";
+		console.log(outputThree);
+
+
+
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<title>MDN Storing Variables</title>
+</head>
+
+<body>
+
+	<button id="button_A">Press me for Option A</button>
+	<h3 id="heading_A"></h3>
+
+
+	<button id="button_B">Press me for Option B</button>
+	<h3 id="heading_B"></h3>
+
+
+
+
+
+
+	<script>
+
+		//Declare a Variable
+		const buttonA = document.querySelector("#button_A");
+		const headingA = document.querySelector("#heading_A");
+
+
+		buttonA.onclick = () => {
+			const name = prompt("What is your name?");
+
+			alert(`Hello ${name}, nice to see you!`);
+			headingA.textContent = `Welcome ${name}`;
+
+		};
+
+		// Option two to not declare a variable
+		const buttonB = document.querySelector("#button_B");
+		const headingB = document.querySelector("#heading_B");
+
+		buttonB.onclick = () => {
+			alert(`Hello ${prompt("What is your name?")}, nice to see you!`);
+			headingB.textContent = `Welcome ${prompt("What is your name?")}`;
+		};
+
+
+
+
+		// Initialize a Variable -> hositing does not work with Let. Var you can declare the same variable as many times as you like but you cannot with let. 
+		let myName = "Chris";
+		myName = "Bob";
+
+		function logName() {
+			console.log(myName);
+		}
+
+
+		logName();
+
+
+
+
+
+
+	</script>
+
+</body>
+
+</html>
