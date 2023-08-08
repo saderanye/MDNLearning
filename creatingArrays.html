@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+
+<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays">MDN Link to Arrays Tutorial</a>
+
+
+
+
+<script>
+
+
+// Creating Arrays
+const shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
+console.log(shopping);
+
+const sequence = [1, 1, 2, 3, 5, 8, 13];
+const random = ["tree", 795, [0, 1, 2]];
+
+// Finding the length of above shopping array
+console.log(shopping.length); // 5
+
+// Accessing and modifying array items
+console.log(shopping[0]); //returns "bread"
+shopping[0] = "tahini";
+console.log(shopping); // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+
+// Finding the index of items in an array
+const birds = ["Parrot", "Falcon", "Owl"];
+console.log(birds.indexOf("Owl")); //  2
+console.log(birds.indexOf("Rabbit")); // -1 due to not being in the array
+
+
+//Adding items
+const cities = ["Manchester", "Liverpool"];
+cities.push("Cardiff");
+console.log(cities);
+cities.push("Chandler", "Phoenix");
+console.log(cities);
+const newLength = cities.push("Bristol");
+console.log(newLength);
+
+//Adding items to the Front of Array
+const citiesTwo = ["Manchester", "Liverpool"];
+citiesTwo.unshift("Edinburgh");
+console.log(citiesTwo);
+
+
+//Removing items
+const citiesThree =  ["Manchester", "Liverpool"];
+const removedCity = citiesThree.pop();
+console.log(removedCity);
+
+//Remove first item an array
+const citiesFour = ["Manchester", "Liverpool"];
+citiesFour.shift();
+console.log(citiesFour); // [ "Liverpool" ]
+
+
+const citiesFive = ["Manchester", "Liverpool", "Edinburgh", "Carlisle"];
+const index = cities.indexOf("Liverpool");
+if  (index !== -1) {
+	citiesFive.splice(index, 1);
+	
+}
+
+console.log(citiesFive);
+
+</script>
+</body>
+</html>

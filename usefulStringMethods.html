@@ -1,0 +1,154 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+
+
+<script>
+
+
+// Finding the Length of a String?
+const string = "This is my string";
+string.length; 
+
+
+
+//Retrieving a specific string character
+string[0];
+
+//Combinging two techniques above
+browserType[browserType.length - 1];
+
+
+//Testing if a string contains a substring
+const browserType = "mozilla";
+
+if (browserType.includes("zilla")) {
+	console.log("Found zilla!");
+	
+} else {
+	console.log("No zilla here!");
+}
+
+
+//startsWith
+const browserType = "mozilla";
+
+if (browserType.startsWith("zilla")) {
+  console.log("Found zilla!");
+} else {
+  console.log("No zilla here!");
+}
+
+
+//endsWith
+const browserType = "mozilla";
+
+if (browserType.endsWith("zilla")) {
+  console.log("Found zilla!");
+} else {
+  console.log("No zilla here!");
+}
+
+
+
+//Finding the position of a substring in a string
+const tagline = "MDN - Resources for developers, by developers";
+console.log(tagline.indexOf("developers")); // 20
+
+console.log(tagline.indexOf("x")); // -1 due to no x is listed in the string
+
+const firstOccurrence = tagline.indexOf("developers");
+const secondOccurrence = tagline.indexOf("developers", firstOccurrence + 1);
+
+console.log(firstOccurrence); // 20
+console.log(secondOccurrence); // 35
+
+
+
+
+
+
+
+
+
+
+//Extracting a substring from a string
+
+const browserType = "mozilla";
+console.log(browserType.slice(1,4));
+
+browserType.slice(2); // "zilla"
+
+
+//Changing case
+const radData = "My NaMe Is MuD";
+
+console.log(radData.toLowerCase());
+console.log(radData.toUpperCase());
+
+
+//Updating parts of a string
+const browserType = "mozilla";
+const updated = browserType.replace("moz", "van");
+
+console.log(updated); // "vanilla"
+console.log(browserType); // "mozilla"
+
+
+
+let quote = "To be or not to be";
+quote = quote.replaceAll("be", "code");
+
+console.log(quote); // "To code or not to code"
+
+
+
+//Excercise 1
+const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+for (const city of cities) {
+  // write your code just below here
+  const lower = city.toLowerCase();
+  const firstLetter = lower.slice(0,1);
+  const capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());
+  const result = capitalized;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}
+
+
+
+
+
+//Excercise 2
+const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for (const station of stations) {
+  // write your code just below here
+  const code = station.slice(0,3);
+  const semiColon = station.indexOf(';');
+  const name = station.slice(semiColon + 1);
+  const result = `${code}: ${name}`;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}
+
+
+</script>
+</body>
+</html>
